@@ -6,10 +6,7 @@
 
 <ul>
     <li>01-go上路
-        <ul>
-            <li>环境安装</li>
-            <li>编辑器</li>
-        </ul>
     </li>
+    <li>02-gin</li>
 </ul>
 
