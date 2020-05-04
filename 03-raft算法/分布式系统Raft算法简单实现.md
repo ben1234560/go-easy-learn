@@ -9,3 +9,9 @@
 - 有可能有多个node随机时间一致都变成Candidate，那么就都发起投票，最高者成为Leader；
 - 有可能多个Candidate平票，平票后这些Candidate会再进入随机时间，谁先到时间，谁就成为Candidate，发起投票，直至选出Leader；
 - 如果出现分隔的集群合并，那么谁的Follower多谁就成为新的Leader，如果平，则又进入随机时间；
+
+### 实现效果
+
+![1588578124815](assets/1588578124815.png)
+
+> 最终只有一个节点成为leader
