@@ -1,0 +1,29 @@
+// 版本号
+syntax = "proto3";
+
+// 指定生成 user.pb.go的包名
+package proto;
+
+// 定义客户端请求的数据格式
+message UserRequest{
+    // 定义请求参数，1 表示编码序号，也就是用1可以调用到这个字段，建议控制在1~15内
+    string name = 1;
+}
+// 定义服务端响应的数据格式
+message UserResponse{
+    // 定义响应参数，int32定义类型，1 表示编码序号
+    int32 id = 1;
+    string name = 2;
+    int32 age = 3;
+    // 字段修饰符
+    // repeated 表示可变数组，类似切片类型
+    repeated string hobby = 4;
+}
+// 定义开放调用的服务（接口）
+service UserInfoService{
+    // 接口内的方法
+    // 定义请求参数为UserRequest，响应参数为UserResponse
+    rpc GetUserInfo (UserRequest) returns (UserResponse){}
+}
+// 写完后右键打开terminal，执行 protoc -I . --go_out=plugins=grpc:. ./user.proto
+// 执行完就可以在改目录下看到生成的user.pb.go文件，可以点进去看看
