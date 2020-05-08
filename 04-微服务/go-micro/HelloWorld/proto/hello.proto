@@ -1,0 +1,21 @@
+// 写明版本号
+syntax = "proto3";
+
+// 定义需要的结构体参数，请求参数
+// 结构体和其它语言的变量很像，结构体更加规范，写在一个集合里而不是零散的
+message InfoRequest {
+    string username = 1;
+}
+
+// 返回参数
+message InfoResponse {
+    string msg = 2;
+}
+
+// 定义接口，InfoRequest是请求参数（是个结构体），InfoResponse是返回参数（也是个结构体）
+service Hello {
+    rpc Info (InfoRequest) returns (InfoResponse){}
+}
+// 写完后在terminal（右键打开），执行生成go文件语句
+// protoc -I. --micro_out=. --go_out=. ./hello.proto
+// 执行完会多出来两个go文件，主要内容在micro里
