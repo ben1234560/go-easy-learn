@@ -33,7 +33,7 @@ cmd访问（如下）
 micro call hello Hello.Info {\"username\":\"ben\"}
 ~~~
 
-> mac下可能不需要反斜杠转义，win是需要的
+> mac下不需要反斜杠转义，win是需要的
 
 ![1588844317671](assets/1588844317671.png)
 
