@@ -28,8 +28,8 @@ func main()  {
 	service := micro.NewService(
 		// 设置微服务的名字，用来访问，到时候访问hello就能访问到
 		micro.Name("hello"),
-		// 指定地址是需要的，如果没有可能报408timeout错误
-		micro.Address("127.0.0.1:54782"),
+		// 如果报408timeout错误则指定地址，即把下面注释的内容解开
+		// micro.Address("127.0.0.1:54782"),
 		)
 	// 2.初始化
 	service.Init()
