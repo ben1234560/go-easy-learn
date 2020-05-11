@@ -1,0 +1,66 @@
+// 指定版本
+syntax = "proto3";
+
+package pb;
+
+// 定义需要的结构体
+// 定义用户
+message User {
+    int32 id = 1;
+    string name = 2;
+    string address = 3;
+    string phone = 4;
+}
+
+// 增
+message InsertUserReq {
+    int32 id = 1;
+    string name = 2;
+    string address = 3;
+    string phone = 4;
+}
+
+message InsertUserRep {
+    int32 id = 1;
+    string name = 2;
+    string address = 3;
+    string phone = 4;
+}
+// 删
+message DeleteUserReq {
+    int32 id = 1;
+}
+
+message DeleteUserRep {
+}
+// 改
+message ModifyUserReq {
+    int32 id = 1;
+    string name = 2;
+    string address = 3;
+    string phone = 4;
+}
+message ModifyUserRep {
+}
+// 查
+message SelectUserReq {
+    int32 id = 1;
+}
+message SelectUserRep {
+    User users = 1;
+}
+
+// 定义接口和方法
+service UserService {
+    // 增删改查
+    rpc InsertUser (InsertUserReq) returns (InsertUserRep) {
+    }
+    rpc DeleteUser (DeleteUserReq) returns (DeleteUserRep) {
+    }
+    rpc ModifyUser (ModifyUserReq) returns (ModifyUserRep) {
+    }
+    rpc SelectUser (SelectUserReq) returns (SelectUserRep) {
+    }
+}
+// 编写完后开始生成两个go文件，放在src/share/pb下，根据user.proto生成
+// protoc -I . --micro_out=../src/share/pb --go_out=../src/share/pb ./user.proto
