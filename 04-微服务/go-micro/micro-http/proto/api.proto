@@ -1,0 +1,30 @@
+// 指定版本
+syntax = "proto3";
+
+// 定义请求和响应的参数
+message CallRequest{
+    string name = 1;
+}
+
+message CallResponse{
+    string message = 2;
+}
+
+// 在Hello我们只定义了一个请求和响应参数，现在我们定义两个，演示如何用两个请求和响应
+message EmptyRequest{}
+
+message EmptyResponse{}
+
+// 定义接口，使用第一对请求和响应参数
+service Example{
+    rpc Call(CallRequest) returns (CallResponse){}
+}
+
+// 定义接口，使用第二对请求和响应参数
+service Foo {
+    rpc Emp(EmptyRequest) returns(EmptyResponse){}
+}
+
+// 编写完成后，在terminal输入如下指令生成go文件
+// protoc -I . --micro_out=. --go_out=. ./api.proto
+// 生成完成后，开始编写server.go 文件
