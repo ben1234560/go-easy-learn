@@ -1,4 +1,4 @@
-# 面试题一
+# go基础面试题
 
 > 推荐https://blog.csdn.net/itcastcpp/article/details/80462619
 
