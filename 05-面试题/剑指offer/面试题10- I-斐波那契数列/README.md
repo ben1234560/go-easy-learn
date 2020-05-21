@@ -40,3 +40,8 @@ func fib(n int) int {
 ```
 0 <= n <= 100
 ```
+
+
+
+可参考[解题思路](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/solution/mian-shi-ti-10-i-fei-bo-na-qi-shu-lie-dong-tai-gui/)
+
