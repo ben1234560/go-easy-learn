@@ -2,7 +2,7 @@
 
 [![image](https://img.shields.io/badge/golang-gin-blue.svg)](https://github.com/gin-gonic/gin) [![image](https://img.shields.io/badge/golang-micro-blue.svg)](https://github.com/micro/micro)
 
-以更简单的方法学go，注释及配图覆盖率达80%以上，旨在帮助快速入门。
+go安装、raft、gin、微服务、剑指offer以更简单的方法学go，注释及配图覆盖率达80%以上，旨在帮助快速入门。
 
 <ul>
     <li><a href="https://github.com/ben1234560/go-easy-learn/tree/master/01-go%E4%B8%8A%E8%B7%AF">01-go上路</a>
