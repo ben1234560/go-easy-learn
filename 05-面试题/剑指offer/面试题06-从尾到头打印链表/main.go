@@ -17,7 +17,7 @@ func reversePrint(head *ListNode) []int {
 	}
 
 	var res []int  // 用一个数组来接受结果
-	// 先把所有值按选后顺序放进来，直到为空
+	// 从头遍历并添加到数组中，直到为空
 	for head != nil {
 		res = append(res, head.Val)
 		head = head.Next
