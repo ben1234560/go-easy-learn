@@ -1,6 +1,6 @@
 # README
 
-`位运算` 
+`数学` `数组` `分治算法` `字符串` `回溯算法` 
 
 #### [面试题17. 打印从1到最大的n位数](https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
 
