@@ -1,6 +1,6 @@
 # README
 
-`位运算` 
+`链表`  `回溯算法`
 
 #### [面试题18. 删除链表的节点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
 
