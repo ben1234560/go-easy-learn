@@ -38,8 +38,8 @@ func exist(board [][]byte, word string) bool {
 
 func main() {
 	// 测试
-	sli := [][]byte{{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}}
-	word := "ABCCED"
+	sli := [][]byte{{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'},{'A','D','C','E'}}
+	word := "ABCCEEE"
 	res := exist(sli, word)
 	fmt.Println(res)
 }
